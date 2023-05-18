@@ -50,6 +50,12 @@ class Descramle:
         self.descrambled_img.show()
         #show descrambled image, but now, a blurred version, since this way the lines around each tile are less visible
         self.descrambled_img.filter(ImageFilter.GaussianBlur(2)).show()
+        """"
+        self.descrambled_img_blurred = self.descrambled_img.filter(ImageFilter.GaussianBlur(2))
+
+        self.descrambled_img = self.descrambled_img.save("descrambled_img.jpg")
+        self.descrambled_img_blurred = self.descrambled_img_blurred.save("descrambled_img_blurred.jpg")
+        """
 
            
         
@@ -57,5 +63,5 @@ class Descramle:
 if __name__ == "__main__":
     des = Descramle("./assignment/assignment.jpg", 43)
     des.iterateSQL()
-    des.start_run()
+  
     
